@@ -183,7 +183,7 @@ class DNS1D {
         if (function_exists('imagecreate')) {
             // GD library
             $imagick = false;
-            $png = imagecreate($width, $height);
+            $png = imagecreate(floor($width), floor($height));
             $bgcol = imagecolorallocate($png, 255, 255, 255);
             imagecolortransparent($png, $bgcol);
             $fgcol = imagecolorallocate($png, $color[0], $color[1], $color[2]);
